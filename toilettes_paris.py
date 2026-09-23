@@ -6,9 +6,7 @@ from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
 
-# ============================================================
 # 1. CONNEXION A MONGODB
-# ============================================================
 
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
@@ -16,9 +14,7 @@ mydb = myclient["toilettes_paris_db"]
 mycol = mydb["toilettesparis"]
 
 
-# ============================================================
 # 2. GEOLOCALISATION DE L'ADRESSE SAISIE
-# ============================================================
 
 geolocator = Nominatim(
     user_agent="toilettes_paris_application"
@@ -32,9 +28,7 @@ location = geolocator.geocode(
 )
 
 
-# ============================================================
 # 3. SI L'ADRESSE EST TROUVEE
-# ============================================================
 
 if location:
 
@@ -46,9 +40,7 @@ if location:
     print("Longitude :", longitude_user)
 
 
-    # ========================================================
     # 4. CREATION DE LA CARTE FOLIUM
-    # ========================================================
 
     m = folium.Map(
         location=[
@@ -60,9 +52,7 @@ if location:
     )
 
 
-    # ========================================================
     # 5. FOND DE CARTE
-    # ========================================================
 
     folium.TileLayer(
         tiles=(
@@ -74,9 +64,7 @@ if location:
     ).add_to(m)
 
 
-    # ========================================================
     # 6. MARQUEUR DE L'ADRESSE DE L'UTILISATEUR
-    # ========================================================
 
     folium.Marker(
 
@@ -105,9 +93,7 @@ if location:
     ).add_to(m)
 
 
-    # ========================================================
     # 7. CERCLE DE RECHERCHE DE 700 METRES
-    # ========================================================
 
     folium.Circle(
 
@@ -125,18 +111,14 @@ if location:
     ).add_to(m)
 
 
-    # ========================================================
     # 8. RECUPERATION DES TOILETTES DANS MONGODB
-    # ========================================================
 
     toilettes = mycol.find()
 
     compteur = 0
 
 
-    # ========================================================
     # 9. PARCOURIR LES TOILETTES
-    # ========================================================
 
     for toilette in toilettes:
 
@@ -154,9 +136,7 @@ if location:
             if latitude_toilette is not None and longitude_toilette is not None:
 
 
-                # ====================================================
                 # 10. CALCUL DE LA DISTANCE
-                # ====================================================
 
                 distance = geodesic(
 
@@ -173,19 +153,15 @@ if location:
                 ).meters
 
 
-                # ====================================================
                 # 11. GARDER UNIQUEMENT LES TOILETTES
                 #     A MOINS DE 700 METRES
-                # ====================================================
 
                 if distance < 700:
 
                     compteur += 1
 
 
-                    # ================================================
                     # 12. RECUPERATION DES INFORMATIONS
-                    # ================================================
 
                     type_toilette = toilette.get(
                         "type",
@@ -223,9 +199,7 @@ if location:
                     )
 
 
-                    # ================================================
                     # 13. COULEUR DU MARQUEUR SELON LE STATUT
-                    # ================================================
 
                     if statut.lower() == "en service":
 
@@ -236,9 +210,7 @@ if location:
                         couleur = "red"
 
 
-                    # ================================================
                     # 14. LIEN GOOGLE STREET VIEW
-                    # ================================================
 
                     street_view_url = (
                         "https://www.google.com/maps/@?api=1"
@@ -248,9 +220,7 @@ if location:
                     )
 
 
-                    # ================================================
                     # 15. CREATION DE LA POPUP
-                    # ================================================
 
                     msg_html = f"""
 
@@ -340,9 +310,7 @@ if location:
                     """
 
 
-                    # ================================================
                     # 16. AJOUT DU MARQUEUR SUR LA CARTE
-                    # ================================================
 
                     folium.Marker(
 
@@ -369,9 +337,7 @@ if location:
                     ).add_to(m)
 
 
-    # ========================================================
     # 17. AFFICHAGE DU NOMBRE DE TOILETTES TROUVEES
-    # ========================================================
 
     print(
         compteur,
@@ -379,32 +345,24 @@ if location:
     )
 
 
-    # ========================================================
     # 18. AJOUT DU CONTROLE DES COUCHES
-    # ========================================================
 
     folium.LayerControl().add_to(m)
 
 
-    # ========================================================
     # 19. SAUVEGARDE DE LA CARTE
-    # ========================================================
 
     m.save("toilettes_paris.html")
 
     print("Carte créée : toilettes_paris.html")
 
 
-    # ========================================================
     # 20. OUVERTURE DANS LE NAVIGATEUR
-    # ========================================================
 
     webbrowser.open("toilettes_paris.html")
 
 
-# ============================================================
 # 21. SI L'ADRESSE N'EST PAS TROUVEE
-# ============================================================
 
 else:
 

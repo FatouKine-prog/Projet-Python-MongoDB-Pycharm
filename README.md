@@ -70,68 +70,38 @@ geo_point_2d
 
 Installation
 
-Installer les bibliothèques nécessaires :
-
-python -m pip install pymongo folium geopy
-
+Installer les bibliothèques nécessaires
 MongoDB doit être lancé sur le port local par défaut :
-
 mongodb://localhost:27017/
 
-────────
 
-▶️ Utilisation
+Utilisation
 
 Lancer le fichier Python :
-
 python toilettes_paris.py
 
 Puis saisir une adresse, par exemple :
-
 10 rue de Rivoli
 
 Le programme :
-
 Adresse saisie
-      ↓
 Géocodage avec Geopy
-      ↓
 Coordonnées GPS
-      ↓
 Lecture des données MongoDB
-      ↓
 Calcul des distances
-      ↓
 Sélection des toilettes à moins de 700 m
-      ↓
 Création de la carte Folium
-      ↓
 toilettes_paris.html
-
 La carte est ensuite enregistrée dans :
-
 toilettes_paris.html
-
 et ouverte automatiquement dans le navigateur.
 
-────────
 
-📂 Organisation du projet
-
-Projet/
-│
-├── toilettes_paris.py
-├── toilettes_paris.html
-└── README.md
-
-────────
-
-📊 Source des données
+Source des données
 
 Les données utilisées proviennent du portail Paris Open Data, dataset des toilettes publiques de Paris.
 
-────────
 
-✅ Résultat
+Résultat
 
 Le projet permet d’obtenir rapidement une carte interactive des toilettes publiques proches d’une adresse parisienne, avec les principales informations utiles sur chaque équipement.

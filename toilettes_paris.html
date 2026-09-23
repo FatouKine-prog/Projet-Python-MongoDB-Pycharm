@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d71b102a331739274ce8cdb9c79d67c5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d71b102a331739274ce8cdb9c79d67c5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d71b102a331739274ce8cdb9c79d67c5 = L.map(
+                "map_d71b102a331739274ce8cdb9c79d67c5",
+                {
+                    center: [48.8554814, 2.3604077],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cac55acce7386b01f469c263267c5c3d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_cac55acce7386b01f469c263267c5c3d.addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var marker_2db3033bb01e2b9cd7ae36f047cc38a1 = L.marker(
+                [48.8554814, 2.3604077],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_32231decb1bf1c5a20bfd932441f7883 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcd04a2013219bf026a45ae6ea54f7b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bed56a3013f36b07e21caf8d587255c9 = $(`<div id="html_bed56a3013f36b07e21caf8d587255c9" style="width: 100.0%; height: 100.0%;">             <div style="font-family: Arial; width: 220px;">                 <h3>Ma position</h3>                 <p>10 rue rivoli</p>             </div>             </div>`)[0];
+                popup_dcd04a2013219bf026a45ae6ea54f7b6.setContent(html_bed56a3013f36b07e21caf8d587255c9);
+            
+        
+
+        marker_2db3033bb01e2b9cd7ae36f047cc38a1.bindPopup(popup_dcd04a2013219bf026a45ae6ea54f7b6)
+        ;
+
+        
+    
+    
+            marker_2db3033bb01e2b9cd7ae36f047cc38a1.bindTooltip(
+                `<div>
+                     Ma position
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2db3033bb01e2b9cd7ae36f047cc38a1.setIcon(icon_32231decb1bf1c5a20bfd932441f7883);
+            
+    
+            var circle_4d8adeaf6df5155b08d793c65fd8e0cb = L.circle(
+                [48.8554814, 2.3604077],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 700, "stroke": true, "weight": 3}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+        var popup_5fec933f9ba31cf1eb84566898986a66 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4202939a7513548f9b77762a961a9767 = $(`<div id="html_4202939a7513548f9b77762a961a9767" style="width: 100.0%; height: 100.0%;">Zone de recherche : 700 mètres</div>`)[0];
+                popup_5fec933f9ba31cf1eb84566898986a66.setContent(html_4202939a7513548f9b77762a961a9767);
+            
+        
+
+        circle_4d8adeaf6df5155b08d793c65fd8e0cb.bindPopup(popup_5fec933f9ba31cf1eb84566898986a66)
+        ;
+
+        
+    
+    
+            var marker_434d4f046c00e8a33ac51247c590f482 = L.marker(
+                [48.855252999706806, 2.3605029994385647],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_c643e764b2ac43cf9ac79acd4aacc592 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_19fc67cc1b54997c875d2967ebf66662 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2f8caaf4b411c51f63b62ee853376de9 = $(`<div id="html_2f8caaf4b411c51f63b62ee853376de9" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             119b rue saint-antoine                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             23h57 - 23h58                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             26 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.855252999706806,2.3605029994385647"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_19fc67cc1b54997c875d2967ebf66662.setContent(html_2f8caaf4b411c51f63b62ee853376de9);
+            
+        
+
+        marker_434d4f046c00e8a33ac51247c590f482.bindPopup(popup_19fc67cc1b54997c875d2967ebf66662)
+        ;
+
+        
+    
+    
+            marker_434d4f046c00e8a33ac51247c590f482.bindTooltip(
+                `<div>
+                     119b rue saint-antoine - 26 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_434d4f046c00e8a33ac51247c590f482.setIcon(icon_c643e764b2ac43cf9ac79acd4aacc592);
+            
+    
+            var marker_54acf166f79240bf89b78058f0c8fcd0 = L.marker(
+                [48.85522108096124, 2.365276627759591],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_71a9298fd7702f545c903174a7b909db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10e8bfb51aca253015137652e6978379 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_42733384af976db2332f0a7a0fac5879 = $(`<div id="html_42733384af976db2332f0a7a0fac5879" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             WC                         </p>                           <p>                             <b>Adresse :</b>                             1 place des vosges                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             Horaires du parc                         </p>                           <p>                             <b>Accès PMR :</b>                             Non                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             358 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.85522108096124,2.365276627759591"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_10e8bfb51aca253015137652e6978379.setContent(html_42733384af976db2332f0a7a0fac5879);
+            
+        
+
+        marker_54acf166f79240bf89b78058f0c8fcd0.bindPopup(popup_10e8bfb51aca253015137652e6978379)
+        ;
+
+        
+    
+    
+            marker_54acf166f79240bf89b78058f0c8fcd0.bindTooltip(
+                `<div>
+                     1 place des vosges - 358 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54acf166f79240bf89b78058f0c8fcd0.setIcon(icon_71a9298fd7702f545c903174a7b909db);
+            
+    
+            var marker_21a2b493adf93426a79863511a5f7500 = L.marker(
+                [48.8541569998975, 2.3560319998420343],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_ece9ba81ea9a3d9c3a965adc26945467 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f993acd651f43de9045305ea3c447776 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_80d43929dd7bec433b11396e8764bcd4 = $(`<div id="html_80d43929dd7bec433b11396e8764bcd4" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             28 rue de l'hotel de ville                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             24/24h                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             353 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.8541569998975,2.3560319998420343"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_f993acd651f43de9045305ea3c447776.setContent(html_80d43929dd7bec433b11396e8764bcd4);
+            
+        
+
+        marker_21a2b493adf93426a79863511a5f7500.bindPopup(popup_f993acd651f43de9045305ea3c447776)
+        ;
+
+        
+    
+    
+            marker_21a2b493adf93426a79863511a5f7500.bindTooltip(
+                `<div>
+                     28 rue de l'hotel de ville - 353 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_21a2b493adf93426a79863511a5f7500.setIcon(icon_ece9ba81ea9a3d9c3a965adc26945467);
+            
+    
+            var marker_7d384223113bce8478ca64479131aa5f = L.marker(
+                [48.853549579130835, 2.3539016527283474],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_bd0d8cc253915e1dbdca07a878cd46d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40c71a70b8ea71e54682dd7172939932 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ac1f62f81b622e5be8a1dd5b6d5a83a0 = $(`<div id="html_ac1f62f81b622e5be8a1dd5b6d5a83a0" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             WC                         </p>                           <p>                             <b>Adresse :</b>                             6v quai de bourbon                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             10h00 - 22h00                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             523 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.853549579130835,2.3539016527283474"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_40c71a70b8ea71e54682dd7172939932.setContent(html_ac1f62f81b622e5be8a1dd5b6d5a83a0);
+            
+        
+
+        marker_7d384223113bce8478ca64479131aa5f.bindPopup(popup_40c71a70b8ea71e54682dd7172939932)
+        ;
+
+        
+    
+    
+            marker_7d384223113bce8478ca64479131aa5f.bindTooltip(
+                `<div>
+                     6v quai de bourbon - 523 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7d384223113bce8478ca64479131aa5f.setIcon(icon_bd0d8cc253915e1dbdca07a878cd46d3);
+            
+    
+            var marker_3c74e0a03cf70b83abd2bc4dfd189a5e = L.marker(
+                [48.860068000390896, 2.36070300013047],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_f3f0acebde202121d541d3dcecf22ea6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32fe30da50b8ace66c34de427da8e6f8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_725af368c87950a6f8649b47b1b87c19 = $(`<div id="html_725af368c87950a6f8649b47b1b87c19" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             2 rue des quatre fils                         </p>                           <p>                             <b>Arrondissement :</b>                             75003                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             06h00 - 22h00                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             510 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.860068000390896,2.36070300013047"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_32fe30da50b8ace66c34de427da8e6f8.setContent(html_725af368c87950a6f8649b47b1b87c19);
+            
+        
+
+        marker_3c74e0a03cf70b83abd2bc4dfd189a5e.bindPopup(popup_32fe30da50b8ace66c34de427da8e6f8)
+        ;
+
+        
+    
+    
+            marker_3c74e0a03cf70b83abd2bc4dfd189a5e.bindTooltip(
+                `<div>
+                     2 rue des quatre fils - 510 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c74e0a03cf70b83abd2bc4dfd189a5e.setIcon(icon_f3f0acebde202121d541d3dcecf22ea6);
+            
+    
+            var marker_b988cc889f92d9a3611716019867c029 = L.marker(
+                [48.85783900005621, 2.3558229999089435],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_96027ba9693ac422047ea2b93b4ddf12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05be8f2d82ad98b45d679013050ee5b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_73e5a35b923413de04874f915286292a = $(`<div id="html_73e5a35b923413de04874f915286292a" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             10b rue de moussy                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             24/24h                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             426 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.85783900005621,2.3558229999089435"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_05be8f2d82ad98b45d679013050ee5b1.setContent(html_73e5a35b923413de04874f915286292a);
+            
+        
+
+        marker_b988cc889f92d9a3611716019867c029.bindPopup(popup_05be8f2d82ad98b45d679013050ee5b1)
+        ;
+
+        
+    
+    
+            marker_b988cc889f92d9a3611716019867c029.bindTooltip(
+                `<div>
+                     10b rue de moussy - 426 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b988cc889f92d9a3611716019867c029.setIcon(icon_96027ba9693ac422047ea2b93b4ddf12);
+            
+    
+            var marker_e3f7996696fc35465b677fb4ae3b89a4 = L.marker(
+                [48.85265299994968, 2.3683649994164124],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_6064a12e014a3f93029aac64c2636284 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0d7d2516df93fdeb8c3155eb4e5733b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_03bc574cde0fbd97205345ce715f06d1 = $(`<div id="html_03bc574cde0fbd97205345ce715f06d1" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             46 v bd henri iv                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             24/24h                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             663 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.85265299994968,2.3683649994164124"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_b0d7d2516df93fdeb8c3155eb4e5733b.setContent(html_03bc574cde0fbd97205345ce715f06d1);
+            
+        
+
+        marker_e3f7996696fc35465b677fb4ae3b89a4.bindPopup(popup_b0d7d2516df93fdeb8c3155eb4e5733b)
+        ;
+
+        
+    
+    
+            marker_e3f7996696fc35465b677fb4ae3b89a4.bindTooltip(
+                `<div>
+                     46 v bd henri iv - 663 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3f7996696fc35465b677fb4ae3b89a4.setIcon(icon_6064a12e014a3f93029aac64c2636284);
+            
+    
+            var marker_da18e8e600168ce542279cb170e97f7a = L.marker(
+                [48.854278089074455, 2.3545796777169627],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_e94740c18892ac7b2350ba864409c318 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b15f2b88ddc0feff7d1e40af16001faa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e24aa9712ff812f46c24474c3df002ff = $(`<div id="html_e24aa9712ff812f46c24474c3df002ff" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             WC                         </p>                           <p>                             <b>Adresse :</b>                             100 voie georges pompidou                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             10h00 - 22h00                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             448 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.854278089074455,2.3545796777169627"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_b15f2b88ddc0feff7d1e40af16001faa.setContent(html_e24aa9712ff812f46c24474c3df002ff);
+            
+        
+
+        marker_da18e8e600168ce542279cb170e97f7a.bindPopup(popup_b15f2b88ddc0feff7d1e40af16001faa)
+        ;
+
+        
+    
+    
+            marker_da18e8e600168ce542279cb170e97f7a.bindTooltip(
+                `<div>
+                     100 voie georges pompidou - 448 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da18e8e600168ce542279cb170e97f7a.setIcon(icon_e94740c18892ac7b2350ba864409c318);
+            
+    
+            var marker_dccc5784100d5a2c01069ecd5b1891cb = L.marker(
+                [48.85822475975672, 2.363290756873782],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_1bc7846b671ca0ee8c5974167095c2d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b9de652c14fc4328ae190ad52375eab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ed145c4cc26bda600d26a0a81513c9de = $(`<div id="html_ed145c4cc26bda600d26a0a81513c9de" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             WC                         </p>                           <p>                             <b>Adresse :</b>                             5 rue du parc royal                         </p>                           <p>                             <b>Arrondissement :</b>                             75003                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             Horaires du parc                         </p>                           <p>                             <b>Accès PMR :</b>                             Non                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             371 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.85822475975672,2.363290756873782"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_8b9de652c14fc4328ae190ad52375eab.setContent(html_ed145c4cc26bda600d26a0a81513c9de);
+            
+        
+
+        marker_dccc5784100d5a2c01069ecd5b1891cb.bindPopup(popup_8b9de652c14fc4328ae190ad52375eab)
+        ;
+
+        
+    
+    
+            marker_dccc5784100d5a2c01069ecd5b1891cb.bindTooltip(
+                `<div>
+                     5 rue du parc royal - 371 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dccc5784100d5a2c01069ecd5b1891cb.setIcon(icon_1bc7846b671ca0ee8c5974167095c2d4);
+            
+    
+            var marker_ca25ea88380ee808fa1f4ba70dd63276 = L.marker(
+                [48.85321800009419, 2.359600999616255],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_5c130d84a2f8023a7c9494c5d6e660a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d08bfa960d61ba6b223d21569ae3bdcb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f9bc3f4ad039078130a382bbf4baa8fa = $(`<div id="html_f9bc3f4ad039078130a382bbf4baa8fa" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             17 rue de l'ave maria                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             06h00 - 22h00                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             258 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.85321800009419,2.359600999616255"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_d08bfa960d61ba6b223d21569ae3bdcb.setContent(html_f9bc3f4ad039078130a382bbf4baa8fa);
+            
+        
+
+        marker_ca25ea88380ee808fa1f4ba70dd63276.bindPopup(popup_d08bfa960d61ba6b223d21569ae3bdcb)
+        ;
+
+        
+    
+    
+            marker_ca25ea88380ee808fa1f4ba70dd63276.bindTooltip(
+                `<div>
+                     17 rue de l'ave maria - 258 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ca25ea88380ee808fa1f4ba70dd63276.setIcon(icon_5c130d84a2f8023a7c9494c5d6e660a1);
+            
+    
+            var marker_b9fbd29510a9eae6fbcb6ba62f8b90dd = L.marker(
+                [48.8567980002404, 2.354192000454317],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_e88013ca47e52d479f1bb4ec6ef4987a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04a7d5269303cfcd78ae73a9d4e79a52 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dabc32c3f735bf8339e4a640f6d6163b = $(`<div id="html_dabc32c3f735bf8339e4a640f6d6163b" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Sanisette                         </p>                           <p>                             <b>Adresse :</b>                             50 rue de rivoli                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             24/24h                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             479 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.8567980002404,2.354192000454317"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_04a7d5269303cfcd78ae73a9d4e79a52.setContent(html_dabc32c3f735bf8339e4a640f6d6163b);
+            
+        
+
+        marker_b9fbd29510a9eae6fbcb6ba62f8b90dd.bindPopup(popup_04a7d5269303cfcd78ae73a9d4e79a52)
+        ;
+
+        
+    
+    
+            marker_b9fbd29510a9eae6fbcb6ba62f8b90dd.bindTooltip(
+                `<div>
+                     50 rue de rivoli - 479 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b9fbd29510a9eae6fbcb6ba62f8b90dd.setIcon(icon_e88013ca47e52d479f1bb4ec6ef4987a);
+            
+    
+            var marker_5f8fec370ecb6d1210c025938cc47af2 = L.marker(
+                [48.852020021082176, 2.3606999839537917],
+                {
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+        
+    
+            var icon_50211ef695a7160e5e596534891e9e43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94089af52c0ea207ebd114d5be6a7d62 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f2d1bc2ac5d6079855e2d4d98e25bfd4 = $(`<div id="html_f2d1bc2ac5d6079855e2d4d98e25bfd4" style="width: 100.0%; height: 100.0%;">                      <div style="                         font-family: Arial;                         width: 270px;                     ">                          <h3 style="                             color: #333;                             margin-bottom: 10px;                         ">                             🚻 Toilettes publiques                         </h3>                           <p>                             <b>Type :</b>                             Urinoir                         </p>                           <p>                             <b>Adresse :</b>                             11 quai des célestins                         </p>                           <p>                             <b>Arrondissement :</b>                             75004                         </p>                           <p>                             <b>Statut :</b>                             En service                         </p>                           <p>                             <b>Horaires :</b>                             10h00 - 22h00                         </p>                           <p>                             <b>Accès PMR :</b>                             Oui                         </p>                           <p>                             <b>Relais bébé :</b>                             Non                         </p>                           <p style="                             font-weight: bold;                         ">                             Distance :                             385 mètres                         </p>                           <a                             href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=48.852020021082176,2.3606999839537917"                             target="_blank"                              style="                                 display: inline-block;                                 background-color: #4285F4;                                 color: white;                                 padding: 8px 12px;                                 text-decoration: none;                                 border-radius: 4px;                             "                         >                              Voir dans Street View                          </a>                      </div>                      </div>`)[0];
+                popup_94089af52c0ea207ebd114d5be6a7d62.setContent(html_f2d1bc2ac5d6079855e2d4d98e25bfd4);
+            
+        
+
+        marker_5f8fec370ecb6d1210c025938cc47af2.bindPopup(popup_94089af52c0ea207ebd114d5be6a7d62)
+        ;
+
+        
+    
+    
+            marker_5f8fec370ecb6d1210c025938cc47af2.bindTooltip(
+                `<div>
+                     11 quai des célestins - 385 m
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5f8fec370ecb6d1210c025938cc47af2.setIcon(icon_50211ef695a7160e5e596534891e9e43);
+            
+    
+            var layer_control_50a5b2e44932ea960655e265812b52d8_layers = {
+                base_layers : {
+                    "Esri World Street Map" : tile_layer_cac55acce7386b01f469c263267c5c3d,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_50a5b2e44932ea960655e265812b52d8 = L.control.layers(
+                layer_control_50a5b2e44932ea960655e265812b52d8_layers.base_layers,
+                layer_control_50a5b2e44932ea960655e265812b52d8_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_d71b102a331739274ce8cdb9c79d67c5);
+
+        
+</script>
+</html>

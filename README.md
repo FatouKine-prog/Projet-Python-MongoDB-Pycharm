@@ -1,36 +1,137 @@
-Toilettes publiques de Paris
+Toilettes publiques à Paris
 
-Projet Python réalisé à partir des données Open Data Paris.
+Présentation
 
-L'application permet de saisir une adresse à Paris et d'afficher sur une carte les toilettes publiques situées à moins de 700 mètres. 
+Ce projet permet de rechercher et afficher sur une carte les toilettes publiques situées à proximité d’une adresse à Paris.
+Les données proviennent de Paris Open Data et sont stockées dans une base MongoDB.
+L’utilisateur saisit une adresse, le programme récupère ses coordonnées GPS, calcule la distance avec les toilettes enregistrées dans la base, puis affiche sur une carte les équipements situés à moins de 700 mètres.
+
+
+Objectifs du projet
+
+• Utiliser une base de données issue de Paris Open Data
+• Stocker et exploiter les données avec MongoDB
+• Se connecter à MongoDB depuis Python avec Pycharm
+• Géocoder une adresse avec Geopy / Nominatim
+• Calculer la distance entre deux coordonnées GPS
+• Afficher les résultats sur une carte interactive avec Folium
+
+Fonctionnalités
+
+• Saisie d’une adresse à Paris
+• Conversion de l’adresse en latitude et longitude
+• Recherche des toilettes publiques dans MongoDB
+• Calcul de la distance entre l’utilisateur et chaque toilette
+• Affichage uniquement des toilettes situées à moins de 700 m
+• Affichage d’un cercle représentant la zone de recherche
+• Marqueurs de couleur selon le statut :
+  • Vert : en service
+  • Rouge : autre statut
+• Informations disponibles dans les popups :
+  • type
+  • adresse
+  • arrondissement
+  • statut
+  • horaires
+  • accès PMR
+  • relais bébé
+  • distance
+• Lien vers Google Street View
+
 
 Technologies utilisées
-Python
-MongoDB
-PyCharm
-Geopy
-Folium
+
+• Python
+• MongoDB
+• Navicat
+• PyCharm
+• PyMongo
+• Folium
+• Geopy / Nominatim
+• HTML pour la carte générée
+
 
 Base de données
+
+Base MongoDB utilisée :
 Database : toilettes_paris_db
 Collection : toilettesparis
 
-Fonctionnement
-L'utilisateur saisit une adresse.
-Geopy récupère les coordonnées GPS.
-Python lit les toilettes enregistrées dans MongoDB.
-La distance entre l'adresse et chaque toilette est calculée.
-Les toilettes situées à moins de 700 m sont affichées sur une carte Folium.
-Les marqueurs indiquent le statut des toilettes :
-🟢 En service
-🔴 Autre statut
-🔵 Position de l'utilisateur
+Le document contient notamment les champs suivants :
+type
+statut
+adresse
+arrondissement
+horaire
+acces_pmr
+relais_bebe
+geo_point_2d
+
 
 Installation
-python -m pip install pymongo folium geopy
-Lancer le projet
-python toilettes_paris.py
-Une carte toilettes_paris.html est ensuite générée et ouverte dans le navigateur.
 
-Source
-Données : Open Data Paris – Toilettes publiques.
+Installer les bibliothèques nécessaires :
+
+python -m pip install pymongo folium geopy
+
+MongoDB doit être lancé sur le port local par défaut :
+
+mongodb://localhost:27017/
+
+────────
+
+▶️ Utilisation
+
+Lancer le fichier Python :
+
+python toilettes_paris.py
+
+Puis saisir une adresse, par exemple :
+
+10 rue de Rivoli
+
+Le programme :
+
+Adresse saisie
+      ↓
+Géocodage avec Geopy
+      ↓
+Coordonnées GPS
+      ↓
+Lecture des données MongoDB
+      ↓
+Calcul des distances
+      ↓
+Sélection des toilettes à moins de 700 m
+      ↓
+Création de la carte Folium
+      ↓
+toilettes_paris.html
+
+La carte est ensuite enregistrée dans :
+
+toilettes_paris.html
+
+et ouverte automatiquement dans le navigateur.
+
+────────
+
+📂 Organisation du projet
+
+Projet/
+│
+├── toilettes_paris.py
+├── toilettes_paris.html
+└── README.md
+
+────────
+
+📊 Source des données
+
+Les données utilisées proviennent du portail Paris Open Data, dataset des toilettes publiques de Paris.
+
+────────
+
+✅ Résultat
+
+Le projet permet d’obtenir rapidement une carte interactive des toilettes publiques proches d’une adresse parisienne, avec les principales informations utiles sur chaque équipement.

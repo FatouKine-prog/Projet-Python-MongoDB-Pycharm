@@ -101,7 +101,10 @@ Source des données
 
 Les données utilisées proviennent du portail Paris Open Data, dataset des toilettes publiques de Paris.
 
-
 Résultat
 
 Le projet permet d’obtenir rapidement une carte interactive des toilettes publiques proches d’une adresse parisienne, avec les principales informations utiles sur chaque équipement.
+
+Voici un aperçu de l'application
+
+<img width="329" height="447" alt="Capture d&#39;écran 2026-09-24 195737" src="https://github.com/user-attachments/assets/dc74ee46-15f3-4005-b041-14a43f23c3fb" />

@@ -107,19 +107,28 @@ Le projet permet d’obtenir rapidement une carte interactive des toilettes publ
 
 Voici un aperçu de l'application
 
-Les toilettes disponibles à moins de 700m de notre position:
+Saisie d'un adresse:
 
 <img width="329" height="447" alt="Capture d&#39;écran 2026-09-24 195737" src="https://github.com/user-attachments/assets/dc74ee46-15f3-4005-b041-14a43f23c3fb" />
 
 
-Notre position:
+
+Les toilettes disponibles à moins de 700m de notre position:
 
 <img width="598" height="487" alt="image" src="https://github.com/user-attachments/assets/7338b6ae-7562-4604-b66b-69cdc5dbea15" />
+
+
+
+Notre position:
+
+<img width="497" height="349" alt="Capture d&#39;écran 2026-09-24 200116" src="https://github.com/user-attachments/assets/ad4a8f99-42a8-4a2b-af4a-bec9e40a4369" />
+
 
 
 Les informations de la toilette sélectionnée:
 
 <img width="415" height="294" alt="image" src="https://github.com/user-attachments/assets/23350fa4-642b-48ea-aaab-f78efad002fe" />
+
 
 
 Le Street View de la toilette sélectionnée:

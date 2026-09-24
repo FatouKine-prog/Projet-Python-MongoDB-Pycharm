@@ -113,13 +113,13 @@ Saisie d'un adresse:
 
 
 
-Les toilettes disponibles à moins de 700m de notre position:
+Les toilettes disponibles à moins de 700m de ma position:
 
 <img width="598" height="487" alt="image" src="https://github.com/user-attachments/assets/7338b6ae-7562-4604-b66b-69cdc5dbea15" />
 
 
 
-Notre position:
+Ma position:
 
 <img width="497" height="349" alt="Capture d&#39;écran 2026-09-24 200116" src="https://github.com/user-attachments/assets/ad4a8f99-42a8-4a2b-af4a-bec9e40a4369" />
 

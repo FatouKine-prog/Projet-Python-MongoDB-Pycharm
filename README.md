@@ -107,7 +107,7 @@ Le projet permet d’obtenir rapidement une carte interactive des toilettes publ
 
 Voici un aperçu de l'application
 
-Saisie d'un adresse:
+Saisie d'une adresse:
 
 <img width="329" height="447" alt="Capture d&#39;écran 2026-09-24 195737" src="https://github.com/user-attachments/assets/dc74ee46-15f3-4005-b041-14a43f23c3fb" />
 
